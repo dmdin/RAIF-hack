@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block head %}
+    <script type="text/javascript" src="/static/js/moment-with-locales.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="/static/js/tempusdominus-bootstrap-4.min.js"></script>
+    <link rel="stylesheet" href="/static/css/tempusdominus-bootstrap-4.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}
+{% block container %}
+    <h2>Задать параметры</h2>
+
+    <form>
+        <div class="btn-group btn-group-toggle py-2" data-toggle="buttons" id="fg-var">
+        </div>
+
+        <div class="form-row align-items-center">
+            <div class="form-group col-lg-4">
+                <label for="area">Площадь помещения</label>
+                <div class="input-group">
+                    <input type="number" id="area" name="area" min="1" class="form-control"
+                           placeholder="Кв. метры">
+                </div>
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="level">Этажность</label>
+                <div class="input-group">
+                    <input type="number" id="level" name="level" min="1" max="200" class="form-control"
+                           placeholder="Кол-во этажей">
+                </div>
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="year">Год постройки дома</label>
+                <div class="input-group">
+                    <input type="number" id="year" name="year" min="1800" max="2018" class="form-control"
+                           placeholder="Год">
+                </div>
+
+            </div>
+        </div>
+        <div class="form-row align-items-center">
+            <div class="form-group col-lg-6">
+                <label for="walls1">Материал стен</label>
+                <select class="form-control" name="walls1" id="walls_list_1">
+                    <option disabled selected>Выбрать материал...</option>
+                    {% for feature, fac_id, name in walls_list_1 %}
+                        <option id="{{ feature+fac_id }}">{{ name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="walls2">Материал стен КС</label>
+                <select class="form-control" name="walls2" id="walls_list_2">
+                    <option disabled selected>Выбрать материал...</option>
+                    {% for feature, fac_id, name in walls_list_2 %}
+                        <option id="{{ feature+fac_id }}">{{ name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+     <div class="form-row align-items-center">
+            <div class="form-group col-lg-6">
+                <label for="districts">Микрорайоны г. Чебоксары</label>
+                <select class="form-control" name="districts" id="districts">
+                    <option disabled selected>Выбрать микрорайон...</option>
+                    {% for feature, fac_id, name in districts %}
+                        <option id="{{ feature+fac_id }}">{{ name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Предсказать</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,3 @@
+class VkBotException(BaseException):
+    pass
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAIF Hackaton 2018 | BYLB</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/theme.css" type="text/css">
+    <script src="/static/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-light navbar-light border d-flex flex-row align-items-center justify-content-end">
+    <div class="container">
+        <a class="navbar-brand text-primary mr-auto" href="/">RAIF Hackaton 2018 | BYLB</a>
+    </div>
+</nav>
+<div id="content">
+    <div class="container py-3">{% block container %}{% endblock %}</div>
+</div>
+</body>
+</html>
