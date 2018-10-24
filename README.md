@@ -1,5 +1,9 @@
-# task_solution
+# RAIF Rosreestr task_solution
 Ссылка на презентацию https://docs.google.com/presentation/d/1zSsHm2Mt1bdPbI24BD749KxCasvgzvVX0XutgDut8vc/edit?usp=sharing
 
 
-Репозиторий будет называться так по понятным причинам, после окончания хакатона он будет переименован, будет добавлено нормальное описание и теги
+Решение команды BYLB [Big Yandex Lyceum Brothers] кейса от Россреестра по редсказанию кадастровой стоимости. 
+Кейс решали:
+Дин Дмитрий - https://t.me/Dikower
+Прохоров Николай - https://t.me/prohich13
+Безвершенко Леонид - https://t.me/lbezvershenko
