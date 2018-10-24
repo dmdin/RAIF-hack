@@ -4,6 +4,9 @@
 
 Решение команды BYLB [Big Yandex Lyceum Brothers] кейса от Россреестра по редсказанию кадастровой стоимости. 
 Кейс решали:
+
 Дин Дмитрий - https://t.me/Dikower
+
 Прохоров Николай - https://t.me/prohich13
+
 Безвершенко Леонид - https://t.me/lbezvershenko
