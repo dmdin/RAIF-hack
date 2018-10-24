@@ -9,7 +9,11 @@ $(document).ready(function () {
                 year: $('#year').val(),
                 walls1: $('#walls_list_1').val(),
                 walls2: $('#walls_list_2').val(),
-                districts: $('#districts').val()
+                districts: $('#districts').val(),
+                dist1: $('#dist1').val(),
+                dist2: $('#dist2').val(),
+                code: $('#code').val(),
+                predict: $('#preidct').val()
 
 
             },
@@ -19,10 +23,10 @@ $(document).ready(function () {
             .done(function (data) {
 
                 if (data.error) {
-                    alert('Коля пидарас поля не заполнил')
+                    alert(data.error)
                 }
                 else {
-                    alert('Area: ' + data.area + ' Level: ' + data.level + ' Дохуя стоит!')
+                    alert(data.predict)
                 }
 
             });
